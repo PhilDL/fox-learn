@@ -59,9 +59,16 @@
                         <label class="text-gray-200 font-semibold uppercase block mb-2" for="height">Height (in m)</label>
                         <input class="font-bold w-full rounded-md appearance-none focus:outline-none focus:bg-gray-300 bg-gray-200 h-10 text-black text-center" type="number" name="height" id="height" step="0.01">
                     </div>
-                    <div class="block pb-3 ">
+                    <div class="block pb-3">
                         <label class="text-gray-200 font-semibold uppercase block mb-2" for="weight">Weight (in kg)</label>
                         <input class="font-bold w-full rounded-md appearance-none focus:outline-none focus:bg-gray-300 bg-gray-200 h-10 text-black text-center" type="number" name="weight" id="weight">
+                    </div>
+                    <div class="block pb-3">
+                        <label for="gender">Gender:</label>
+                        <select name="gender" id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
                     </div>
                     <button type="submit" class="mt-4 w-full py-4 rounded-md tracking-widest font-bold uppercase bg-yellow-400 :hover:bg-yellow-500 shadow-lg focus:outline:none">
                         BE JUDGED
@@ -98,20 +105,30 @@ form.addEventListener("submit", event => {
     let output = '\n> ' // \n means 'Enter' or 'Skip a line'
     let weight = parseInt(document.getElementById('weight').value);
     let height = parseFloat(document.getElementById('height').value);
+    let gender = document.getElementById('gender').value;
     
+    output += gender + ': ';
     let result = weight/(height*height)
+    
+    if (gender == 'female') {
+        result = result + 3.9;
+    }
+    
     // Actual algorithm logic:
-    if (result < 19) {
-        output += 'underweight';
+    if (result < 16.5) {
+        output += 'annorexia';
     }
-    else if(result < 21) {
-        output += 'perfect weight';
+    else if(result < 18.5) {
+        output += 'thinness';
     }
-    else if(result < 23) {
-        output += 'average weight';
+    else if(result < 25) {
+        output += 'normal weight';
     }
-    else if(result >= 23) {
-        output += 'fat';
+    else if(result < 30) {
+        output += 'overweight';
+    }
+    else if(result >= 30) {
+        output += 'obese';
     }
     // Show the output on document
     resultDomElement.innerHTML += output;
