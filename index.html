@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tailwind Starter Template - Responsive Header : Tailwind Toolbox</title>
+    <title>Fox Teaches</title>
     <meta name="author" content="name">
   <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> <!--Replace with your tailwind.css once created-->
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+    <link rel="stylesheet" href="highlight/styles/monokai-sublime.css">
+    <script src="highlight/highlight.pack.js"></script>
+
 
 </head>
 <body class="bg-indigo-900 font-sans leading-normal tracking-normal">
@@ -17,7 +20,7 @@
     <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
             <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-                <span class="text-2xl pl-2"><i class="em em-heart"></i> Fox Learn </span>
+                <span class="text-2xl pl-2"><i class="em em-heart"></i> Fox Teaches </span>
             </a>
         </div>
 
@@ -71,28 +74,30 @@
                     
                 </div>
             </form>
-
+            <div class="container w-full h-full mt-8">
+                <h2 class="text-2xl text-white font-semibold">Code used</h2>
+                <pre class="w-full h-full">
+                    <code></code>
+                </pre>
+            </div>
         </div>
     </div>
 
-    <script>
-        "use strict";
-        //Javascript to toggle the menu
-        document.getElementById('nav-toggle').onclick = function(){
-            document.getElementById("nav-content").classList.toggle("hidden");
-        }
-        
+    <script id="script">
+        // Javascript Code
         const form = document.querySelector("form");
         const resultDomElement = document.getElementById('result');
 
+        // When user click on Button or Press ENTER
+        // YOUR PROGRAM :
         form.addEventListener("submit", event => {
             event.preventDefault();
-            let output = '\n> '
+            // Instantiate the variables that will be used:
+            let output = '\n> ' // \n means 'Enter' or 'Skip a line'
             let weight = parseInt(document.getElementById('weight').value);
             let height = parseFloat(document.getElementById('height').value);
-            console.log(weight);
-            console.log(height);
-            console.log(weight/(height*height));
+            
+            // Actual algorithm logic:
             if (weight/(height*height) < 19) {
                 output += 'underweight';
             }
@@ -111,9 +116,26 @@
             else if(weight/(height*height) >= 23) {
                 output += 'fat';
             }
+            // Show the output on document
             resultDomElement.innerHTML += output;
         });
+        document.addEventListener('DOMContentLoaded', (event) => {
+          document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+          });
+        });
     </script>
-
+    <script>
+        //Javascript to toggle the menu
+        document.getElementById('nav-toggle').onclick = function(){
+            document.getElementById("nav-content").classList.toggle("hidden");
+        }
+        document.addEventListener('DOMContentLoaded', (event) => {
+          document.querySelectorAll('pre code').forEach((block) => {
+            block.innerHTML = document.getElementById('script').innerHTML;
+            hljs.highlightBlock(block);
+          });
+        });
+    </script>
 </body>
 </html>
