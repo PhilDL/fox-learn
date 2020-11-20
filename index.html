@@ -115,7 +115,7 @@ form.addEventListener("submit", event => {
     else if(weight/(height*height) < 23) {
         output += 'average weight';
     }
-    else if(weight/(height*height) >= 23) {
+    if(weight/(height*height) >= 23) {
         output += 'fat';
     }
     // Show the output on document

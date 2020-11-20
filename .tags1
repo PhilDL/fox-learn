@@ -1,0 +1,61 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+html	/Users/philippelattention/Code/fox-learn.net/index.html	/^<html lang="en">$/;"	function	line:2
+head	/Users/philippelattention/Code/fox-learn.net/index.html	/^<head>$/;"	function	line:3
+meta	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <meta charset="UTF-8">$/;"	function	line:4
+meta	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1.0">$/;"	function	line:5
+meta	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <meta http-equiv="X-UA-Compatible" content="ie=edge">$/;"	function	line:6
+title	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <title>Fox Teaches<\/title>$/;"	function	line:7
+meta	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <meta name="author" content="name">$/;"	function	line:8
+meta	/Users/philippelattention/Code/fox-learn.net/index.html	/^  <meta name="description" content="description here">$/;"	function	line:9
+meta	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <meta name="keywords" content="keywords,here">$/;"	function	line:10
+link	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <link href=".\/dist\/tailwind.css" rel="stylesheet"> <!--Replace with your tailwind.css once created-->$/;"	function	line:11
+link	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <link rel="stylesheet" href=".\/highlight\/styles\/monokai-sublime.css">$/;"	function	line:12
+link	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <link rel="icon" type="image\/svg+xml" href="fox-svgrepo-com.svg">$/;"	function	line:13
+script	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <script src="highlight\/highlight.pack.js"><\/script>$/;"	function	line:14
+body	/Users/philippelattention/Code/fox-learn.net/index.html	/^<body class="bg-indigo-900 font-sans leading-normal tracking-normal">$/;"	function	line:18
+nav	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">$/;"	function	line:20
+div	/Users/philippelattention/Code/fox-learn.net/index.html	/^        <div class="flex items-center flex-shrink-0 text-white mr-6">$/;"	function	line:21
+a	/Users/philippelattention/Code/fox-learn.net/index.html	/^            <a class="text-white no-underline hover:text-white hover:no-underline h-2" href="#">$/;"	function	line:22
+span	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <span class="text-2xl pl-2"><img class="inline-block " src="fox-svgrepo-com.svg" alt="Fox"> Fox Teaches <\/span>$/;"	function	line:23
+div	/Users/philippelattention/Code/fox-learn.net/index.html	/^        <div class="block lg:hidden">$/;"	function	line:27
+button	/Users/philippelattention/Code/fox-learn.net/index.html	/^            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">$/;"	function	line:28
+svg	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <svg class="fill-curweight h-3 w-3" viewBox="0 0 20 20" xmlns="http:\/\/www.w3.org\/2000\/svg"><title>Menu<\/title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"\/><\/svg>$/;"	function	line:29
+div	/Users/philippelattention/Code/fox-learn.net/index.html	/^        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">$/;"	function	line:33
+ul	/Users/philippelattention/Code/fox-learn.net/index.html	/^            <ul class="list-reset lg:flex justify-end flex-1 items-center">$/;"	function	line:34
+li	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <li class="mr-3">$/;"	function	line:35
+a	/Users/philippelattention/Code/fox-learn.net/index.html	/^                    <a class="inline-block py-2 px-4 text-white no-underline" href="#">BMI App<\/a>$/;"	function	line:36
+li	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <li class="mr-3">$/;"	function	line:38
+a	/Users/philippelattention/Code/fox-learn.net/index.html	/^                    <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="budget-app.html">Budget App<\/a>$/;"	function	line:39
+li	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <li class="mr-3">$/;"	function	line:41
+a	/Users/philippelattention/Code/fox-learn.net/index.html	/^                    <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Next App<\/a>$/;"	function	line:42
+li	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <li class="mr-3">$/;"	function	line:44
+a	/Users/philippelattention/Code/fox-learn.net/index.html	/^                    <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Next App<\/a>$/;"	function	line:45
+div	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <div class="container shadow p-3 flex-grow flex items-center w-auto block mx-auto mt-24 md:mt-18">$/;"	function	line:52
+div	/Users/philippelattention/Code/fox-learn.net/index.html	/^        <div class="container justify-end flex-1">$/;"	function	line:53
+h	/Users/philippelattention/Code/fox-learn.net/index.html	/^            <h1 class="text-4xl text-white font-semibold">BMI app<\/h1>$/;"	function	line:54
+p	/Users/philippelattention/Code/fox-learn.net/index.html	/^            <p class="mb-8 mt-4 text-gray-300">Learn what your BMI is to feel bad<\/p>$/;"	function	line:55
+form	/Users/philippelattention/Code/fox-learn.net/index.html	/^            <form class="container grid grid-cols-12 gap-4 w-auto" action="#">$/;"	function	line:56
+div	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <div class="col-span-5 h-full">$/;"	function	line:57
+div	/Users/philippelattention/Code/fox-learn.net/index.html	/^                    <div class="block pb-3 ">$/;"	function	line:58
+label	/Users/philippelattention/Code/fox-learn.net/index.html	/^                        <label class="text-gray-200 font-semibold uppercase block mb-2" for="height">Height (in m)<\/label>$/;"	function	line:59
+input	/Users/philippelattention/Code/fox-learn.net/index.html	/^                        <input class="font-bold w-full rounded-md appearance-none focus:outline-none focus:bg-gray-300 bg-gray-200 h-10 text-black text-center" type="number" name="height" id="height" step="0.01">$/;"	function	line:60
+div	/Users/philippelattention/Code/fox-learn.net/index.html	/^                    <div class="block pb-3 ">$/;"	function	line:62
+label	/Users/philippelattention/Code/fox-learn.net/index.html	/^                        <label class="text-gray-200 font-semibold uppercase block mb-2" for="weight">Weight (in kg)<\/label>$/;"	function	line:63
+input	/Users/philippelattention/Code/fox-learn.net/index.html	/^                        <input class="font-bold w-full rounded-md appearance-none focus:outline-none focus:bg-gray-300 bg-gray-200 h-10 text-black text-center" type="number" name="weight" id="weight">$/;"	function	line:64
+button	/Users/philippelattention/Code/fox-learn.net/index.html	/^                    <button type="submit" class="mt-4 w-full py-4 rounded-md tracking-widest font-bold uppercase bg-yellow-400 :hover:bg-yellow-500 shadow-lg focus:outline:none">$/;"	function	line:66
+div	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <div class="col-span-7 pb-3 ">$/;"	function	line:70
+h	/Users/philippelattention/Code/fox-learn.net/index.html	/^                    <h2 class="text-gray-200 font-semibold uppercase block w-full mb-2">RESULTS $/;"	function	line:71
+button	/Users/philippelattention/Code/fox-learn.net/index.html	/^                        <button onClick="clearOutput()" class="text-xs relative left-3 py-1 px-3 rounded-md ml-2 tracking-widest uppercase bg-green-400 :hover:bg-green-500 shadow-lg focus:outline:none">Clear<\/button>$/;"	function	line:72
+textarea	/Users/philippelattention/Code/fox-learn.net/index.html	/^                        <textarea readonly id="result" class="block bg-gray-800 w-full h-full rounded-md pl-3 text-sm text-gray-300">> ...<\/textarea>$/;"	function	line:75
+div	/Users/philippelattention/Code/fox-learn.net/index.html	/^            <div class="container w-full h-full mt-8">$/;"	function	line:79
+h	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <h2 class="text-2xl text-white font-semibold">Code used<\/h2>$/;"	function	line:80
+pre	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <pre class="w-full h-full">$/;"	function	line:81
+code	/Users/philippelattention/Code/fox-learn.net/index.html	/^                    <code class="text-xs"><\/code>$/;"	function	line:82
+script	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <script id="script">$/;"	function	line:88
+script	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <script>$/;"	function	line:130
+clearOutput	/Users/philippelattention/Code/fox-learn.net/index.html	/^        function clearOutput() {$/;"	function	line:141
