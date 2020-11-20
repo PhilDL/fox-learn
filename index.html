@@ -84,46 +84,46 @@
     </div>
 
     <script id="script">
-        // Javascript Code
-        const form = document.querySelector("form");
-        const resultDomElement = document.getElementById('result');
+// Javascript Code
+const form = document.querySelector("form");
+const resultDomElement = document.getElementById('result');
 
-        // When user click on Button or Press ENTER
-        // YOUR PROGRAM :
-        form.addEventListener("submit", event => {
-            event.preventDefault();
-            // Instantiate the variables that will be used:
-            let output = '\n> ' // \n means 'Enter' or 'Skip a line'
-            let weight = parseInt(document.getElementById('weight').value);
-            let height = parseFloat(document.getElementById('height').value);
-            
-            // Actual algorithm logic:
-            if (weight/(height*height) < 19) {
-                output += 'underweight';
-            }
-            else if(weight/(height*height) >= 19) {
-                output += 'perfect weight';
-            }
-            else if(weight/(height*height) < 21) {
-                output += 'perfect weight';
-            }
-            else if(weight/(height*height) >= 21) {
-                output += 'average weight';
-            }
-            else if(weight/(height*height) < 23) {
-                output += 'average weight';
-            }
-            else if(weight/(height*height) >= 23) {
-                output += 'fat';
-            }
-            // Show the output on document
-            resultDomElement.innerHTML += output;
-        });
-        document.addEventListener('DOMContentLoaded', (event) => {
-          document.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightBlock(block);
-          });
-        });
+// When user click on Button or Press ENTER
+// YOUR PROGRAM :
+form.addEventListener("submit", event => {
+    event.preventDefault();
+    // Instantiate the variables that will be used:
+    let output = '\n> ' // \n means 'Enter' or 'Skip a line'
+    let weight = parseInt(document.getElementById('weight').value);
+    let height = parseFloat(document.getElementById('height').value);
+    
+    // Actual algorithm logic:
+    if (weight/(height*height) < 19) {
+        output += 'underweight';
+    }
+    else if(weight/(height*height) >= 19) {
+        output += 'perfect weight';
+    }
+    else if(weight/(height*height) < 21) {
+        output += 'perfect weight';
+    }
+    else if(weight/(height*height) >= 21) {
+        output += 'average weight';
+    }
+    else if(weight/(height*height) < 23) {
+        output += 'average weight';
+    }
+    else if(weight/(height*height) >= 23) {
+        output += 'fat';
+    }
+    // Show the output on document
+    resultDomElement.innerHTML += output;
+});
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
     </script>
     <script>
         //Javascript to toggle the menu

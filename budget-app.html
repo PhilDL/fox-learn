@@ -83,29 +83,29 @@
     </div>
 
     <script id="script">
-        // Javascript Code
-        const form = document.querySelector("form");
-        const resultDomElement = document.getElementById('result');
+// Javascript Code
+const form = document.querySelector("form");
+const resultDomElement = document.getElementById('result');
 
-        // When user click on Button or Press ENTER
-        // YOUR PROGRAM :
-        form.addEventListener("submit", event => {
-            event.preventDefault();
-            // Instantiate the variables that will be used:
-            let output = '\n> ' // \n means 'Enter' or 'Skip a line'
-            let rent = parseInt(document.getElementById('rent').value);
-            let salary = parseInt(document.getElementById('salary').value);
+// When user click on Button or Press ENTER
+// YOUR PROGRAM :
+form.addEventListener("submit", event => {
+    event.preventDefault();
+    // Instantiate the variables that will be used:
+    let output = '\n> ' // \n means 'Enter' or 'Skip a line'
+    let rent = parseInt(document.getElementById('rent').value);
+    let salary = parseInt(document.getElementById('salary').value);
 
-            // Actual algorithm logic:
-            if (rent > salary) {
-                output += 'Salary too Low';
-            }
-            else {
-                output += 'Salary is enough';
-            }
-            // Show the output on document
-            resultDomElement.innerHTML += output;
-        });
+    // Actual algorithm logic:
+    if (rent > salary) {
+        output += 'Salary too Low';
+    }
+    else {
+        output += 'Salary is enough';
+    }
+    // Show the output on document
+    resultDomElement.innerHTML += output;
+});
     </script>
     <script>
         //Javascript to toggle the menu
