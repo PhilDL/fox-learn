@@ -1,0 +1,26 @@
+{
+  "name": "fox-learn.net",
+  "version": "1.0.0",
+  "description": "fox-learn.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss src/tailwind.css -o dist/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilDL/fox-learn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhilDL/fox-learn/issues"
+  },
+  "homepage": "https://github.com/PhilDL/fox-learn#readme",
+  "dependencies": {
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.1.8",
+    "tailwindcss": "^2.0.1"
+  }
+}
