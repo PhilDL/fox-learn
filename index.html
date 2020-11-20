@@ -104,19 +104,13 @@ form.addEventListener("submit", event => {
     if (result < 19) {
         output += 'underweight';
     }
-    if(result >= 19) {
+    else if(result < 21) {
         output += 'perfect weight';
     }
-    if(result < 21) {
-        output += 'perfect weight';
-    }
-    if(result >= 21) {
+    else if(result < 23) {
         output += 'average weight';
     }
-    if(result < 23) {
-        output += 'average weight';
-    }
-    if(result >= 23) {
+    else if(result >= 23) {
         output += 'fat';
     }
     // Show the output on document

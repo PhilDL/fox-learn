@@ -57,5 +57,5 @@ h	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <h2 
 pre	/Users/philippelattention/Code/fox-learn.net/index.html	/^                <pre class="w-full h-full">$/;"	function	line:81
 code	/Users/philippelattention/Code/fox-learn.net/index.html	/^                    <code class="text-xs"><\/code>$/;"	function	line:82
 script	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <script id="script">$/;"	function	line:88
-script	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <script>$/;"	function	line:131
-clearOutput	/Users/philippelattention/Code/fox-learn.net/index.html	/^        function clearOutput() {$/;"	function	line:142
+script	/Users/philippelattention/Code/fox-learn.net/index.html	/^    <script>$/;"	function	line:125
+clearOutput	/Users/philippelattention/Code/fox-learn.net/index.html	/^        function clearOutput() {$/;"	function	line:136
