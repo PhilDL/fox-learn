@@ -53,22 +53,24 @@
         <div class="container justify-end flex-1">
             <h1 class="text-4xl text-white font-semibold">BMI app</h1>
             <p class="mb-8 mt-4 text-gray-300">Learn what your BMI is to feel bad</p>
-            <form class="container flex flex-grow w-auto" action="#">
-                <div class="block flex-2">
-                    <div class="block pb-3">
-                        <label class="text-gray-200 font-semibold uppercase block" for="height">Height (in m)</label>
+            <form class="container grid grid-cols-12 gap-4 w-auto" action="#">
+                <div class="col-span-5 h-full">
+                    <div class="block pb-3 ">
+                        <label class="text-gray-200 font-semibold uppercase block mb-2" for="height">Height (in m)</label>
                         <input class="font-bold w-full rounded-md appearance-none focus:outline-none focus:bg-gray-300 bg-gray-200 h-10 text-black text-center" type="number" name="height" id="height" step="0.01">
                     </div>
-                    <div class="block">
-                        <label class="text-gray-200 font-semibold uppercase block" for="weight">Weight (in kg)</label>
+                    <div class="block pb-3 ">
+                        <label class="text-gray-200 font-semibold uppercase block mb-2" for="weight">Weight (in kg)</label>
                         <input class="font-bold w-full rounded-md appearance-none focus:outline-none focus:bg-gray-300 bg-gray-200 h-10 text-black text-center" type="number" name="weight" id="weight">
                     </div>
                     <button type="submit" class="mt-4 w-full py-4 rounded-md tracking-widest font-bold uppercase bg-yellow-400 :hover:bg-yellow-500 shadow-lg focus:outline:none">
-                        Valider
+                        BE JUDGED
                     </button>
                 </div>
-                <div class="block flex-1 pl-4 pb-6">
-                    <h2 class="text-gray-200 font-semibold uppercase block">RESULTS</h2>
+                <div class="col-span-7 pb-3 ">
+                    <h2 class="text-gray-200 font-semibold uppercase block w-full mb-2">RESULTS 
+                        <button onClick="clearOutput()" class="text-xs absolute right-3 py-1 px-3 rounded-md ml-2 tracking-widest uppercase bg-green-400 :hover:bg-green-500 shadow-lg focus:outline:none">Clear</button>
+                    </h2>
                     
                         <textarea readonly id="result" class="block bg-gray-800 w-full h-full rounded-md pl-3 text-sm text-gray-300">> ...</textarea>
                     
@@ -136,6 +138,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             hljs.highlightBlock(block);
           });
         });
+        function clearOutput() {
+            event.preventDefault();
+            document.getElementById('result').innerHTML = '> ...';
+        }
     </script>
 </body>
 </html>
