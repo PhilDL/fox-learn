@@ -99,23 +99,24 @@ form.addEventListener("submit", event => {
     let weight = parseInt(document.getElementById('weight').value);
     let height = parseFloat(document.getElementById('height').value);
     
+    let result = weight/(height*height)
     // Actual algorithm logic:
-    if (weight/(height*height) < 19) {
+    if (result < 19) {
         output += 'underweight';
     }
-    else if(weight/(height*height) >= 19) {
+    if(result >= 19) {
         output += 'perfect weight';
     }
-    else if(weight/(height*height) < 21) {
+    if(result < 21) {
         output += 'perfect weight';
     }
-    else if(weight/(height*height) >= 21) {
+    if(result >= 21) {
         output += 'average weight';
     }
-    else if(weight/(height*height) < 23) {
+    if(result < 23) {
         output += 'average weight';
     }
-    if(weight/(height*height) >= 23) {
+    if(result >= 23) {
         output += 'fat';
     }
     // Show the output on document
