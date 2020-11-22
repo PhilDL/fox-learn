@@ -72,80 +72,9 @@
                     
                 </div>
             </form>
-            <div class="container w-full h-full mt-8">
-                <h2 class="text-2xl text-white font-semibold">Explanation</h2>
-                <p class="text-md text-white">
-                    In this challenge you have to write a program that will draw a tree like showed before.
-                </p>
-                <p class="text-md text-white">
-                    The user enter the number of rows and the programm will draw the figure. <br>
-                    To help you, there is 2 new commands :
-                    <ul class="text-md text-white mt-4">
-                        <li>newLine(): print a new line in the result box</li>
-                        <li>print(text): print what is inside of 'text' in the result box</li>
-                    </ul>
-                </p>
-                <h3 class="text-xl text-white font-semibold mt-4">
-                    Concatenation of text (strings)
-                </h3>
-                <p class="text-white">
-                    In most programming langage the + operator when used with text 
-                    will add text to an existing text, for example :
-                    <pre>
-                        <code>
-let basicText = 'abcde';
-print(basicText);
-// Output will be: 
-// abcde
-
-basicText += 'fgh';
-print(basicText);
-// Output will be: 
-// abcdefgh
-
-let otherText = 'WOUAH';
-
-print(otherText+basicText);
-// Output will be: 
-// WOUAHabcdefgh
-
-                        </code>
-                    </pre>
-                </p>
-                <h4 class="text-2xl text-white font-semibold mt-4">
-                    For loops
-                </h4>
-                <p class="text-md text-white">
-                    A loop is a way to do the same thing multiple times. The number 
-                    of times the loop will go is determined by the programmer. A loop in Javascript 
-                    looks like that:
-                    <pre>
-                        <code>
-for (var counter = 0; counter < 5; counter++) {
-    print ("Hello");
-}
-// This will print "Hello" 5 times in the output
-                        </code>
-                    </pre>
-                    <h4 class="text-2xl text-white font-semibold mt-4">Explanation of the elements inside the for()</h3>
-                    <ol class="text-md text-white">
-                        <li>
-                            "var counter = 0" : First we create the "counter" that will begin at 0
-                        </li>
-                        <li>
-                            "counter < 5" : This is the condition to STAY inside the loop. So here 
-                            the loop is over if counter is equals to 5 or above. Warning if your condition 
-                            is not correctly set the computer will do an infinite loop and crash
-                        </li>
-                        <li>
-                            "counter++" : This means that after each loop we add 1 to the counter. "++" is a keyword 
-                            we use in to add 1 to a number, it's shorter than writing counter = counter + 1 but it is 
-                            the same.
-                        </li>
-                    </ol>
-                    
-                </p>
-                <pre class="w-full h-full" style="display:none;">
+            <div class="container w-full h-full mt-8" style="display:none">
+                <h2 class="text-2xl text-white font-semibold">Code used</h2>
+                <pre class="w-full h-full">
                     <code class="text-xs"></code>
                 </pre>
             </div>
@@ -170,14 +99,7 @@ form.addEventListener("submit", event => {
     event.preventDefault();
     // Instantiate the variables that will be used:
     let output = '' // \n means 'Enter' or 'Skip a line'
-    let rows = parseInt(document.getElementById('rows').value);
     
-    newLineInDom();
-    for (var counter = 0; counter < rows; counter++) {
-        output += '*';
-        printInDom(output);
-        newLineInDom();
-    }
 });
 document.addEventListener('DOMContentLoaded', (event) => {
   document.querySelectorAll('pre code').forEach((block) => {
@@ -190,12 +112,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('nav-toggle').onclick = function(){
             document.getElementById("nav-content").classList.toggle("hidden");
         }
-        // document.addEventListener('DOMContentLoaded', (event) => {
-        //   document.querySelectorAll('pre code').forEach((block) => {
-        //     block.innerHTML = document.getElementById('script').innerHTML;
-        //     hljs.highlightBlock(block);
-        //   });
-        // });
+        document.addEventListener('DOMContentLoaded', (event) => {
+          document.querySelectorAll('pre code').forEach((block) => {
+            block.innerHTML = document.getElementById('script').innerHTML;
+            hljs.highlightBlock(block);
+          });
+        });
         function clearOutput() {
             event.preventDefault();
             document.getElementById('result').innerHTML = '> ...';

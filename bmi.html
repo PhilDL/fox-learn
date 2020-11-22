@@ -51,16 +51,27 @@
     <!--Container-->
     <div class="container shadow p-3 flex-grow flex items-center w-auto block mx-auto mt-24 md:mt-18">
         <div class="container justify-end flex-1">
-            <h1 class="text-4xl text-white font-semibold">Tree app</h1>
-            <p class="mb-8 mt-4 text-gray-300">Draw a tree</p>
+            <h1 class="text-4xl text-white font-semibold">BMI app</h1>
+            <p class="mb-8 mt-4 text-gray-300">Learn what your BMI is to feel bad</p>
             <form class="container grid grid-cols-12 gap-4 w-auto" action="#">
                 <div class="col-span-5 h-full">
                     <div class="block pb-3 ">
-                        <label class="text-gray-200 font-semibold uppercase block mb-2" for="rows">Rows</label>
-                        <input class="font-bold w-full rounded-md appearance-none focus:outline-none focus:bg-gray-300 bg-gray-200 h-10 text-black text-center" type="number" name="rows" id="rows" step="0.01">
+                        <label class="text-gray-200 font-semibold uppercase block mb-2" for="height">Height (in m)</label>
+                        <input class="font-bold w-full rounded-md appearance-none focus:outline-none focus:bg-gray-300 bg-gray-200 h-10 text-black text-center" type="number" name="height" id="height" step="0.01">
+                    </div>
+                    <div class="block pb-3">
+                        <label class="text-gray-200 font-semibold uppercase block mb-2" for="weight">Weight (in kg)</label>
+                        <input class="font-bold w-full rounded-md appearance-none focus:outline-none focus:bg-gray-300 bg-gray-200 h-10 text-black text-center" type="number" name="weight" id="weight">
+                    </div>
+                    <div class="block pb-3">
+                        <label class="text-gray-200 font-semibold uppercase block mb-2" for="gender">Gender:</label>
+                        <select class="pl-3 font-bold w-full rounded-md appearance-none focus:outline-none focus:bg-gray-300 bg-gray-200 h-10 text-black text-center" name="gender" id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
                     </div>
                     <button type="submit" class="mt-4 w-full py-4 rounded-md tracking-widest font-bold uppercase bg-yellow-400 :hover:bg-yellow-500 shadow-lg focus:outline:none">
-                        Generate
+                        BE JUDGED
                     </button>
                 </div>
                 <div class="col-span-7 pb-3 ">
@@ -73,79 +84,8 @@
                 </div>
             </form>
             <div class="container w-full h-full mt-8">
-                <h2 class="text-2xl text-white font-semibold">Explanation</h2>
-                <p class="text-md text-white">
-                    In this challenge you have to write a program that will draw a tree like showed before.
-                </p>
-                <p class="text-md text-white">
-                    The user enter the number of rows and the programm will draw the figure. <br>
-                    To help you, there is 2 new commands :
-                    <ul class="text-md text-white mt-4">
-                        <li>newLine(): print a new line in the result box</li>
-                        <li>print(text): print what is inside of 'text' in the result box</li>
-                    </ul>
-                </p>
-                <h3 class="text-xl text-white font-semibold mt-4">
-                    Concatenation of text (strings)
-                </h3>
-                <p class="text-white">
-                    In most programming langage the + operator when used with text 
-                    will add text to an existing text, for example :
-                    <pre>
-                        <code>
-let basicText = 'abcde';
-print(basicText);
-// Output will be: 
-// abcde
-
-basicText += 'fgh';
-print(basicText);
-// Output will be: 
-// abcdefgh
-
-let otherText = 'WOUAH';
-
-print(otherText+basicText);
-// Output will be: 
-// WOUAHabcdefgh
-
-                        </code>
-                    </pre>
-                </p>
-                <h4 class="text-2xl text-white font-semibold mt-4">
-                    For loops
-                </h4>
-                <p class="text-md text-white">
-                    A loop is a way to do the same thing multiple times. The number 
-                    of times the loop will go is determined by the programmer. A loop in Javascript 
-                    looks like that:
-                    <pre>
-                        <code>
-for (var counter = 0; counter < 5; counter++) {
-    print ("Hello");
-}
-// This will print "Hello" 5 times in the output
-                        </code>
-                    </pre>
-                    <h4 class="text-2xl text-white font-semibold mt-4">Explanation of the elements inside the for()</h3>
-                    <ol class="text-md text-white">
-                        <li>
-                            "var counter = 0" : First we create the "counter" that will begin at 0
-                        </li>
-                        <li>
-                            "counter < 5" : This is the condition to STAY inside the loop. So here 
-                            the loop is over if counter is equals to 5 or above. Warning if your condition 
-                            is not correctly set the computer will do an infinite loop and crash
-                        </li>
-                        <li>
-                            "counter++" : This means that after each loop we add 1 to the counter. "++" is a keyword 
-                            we use in to add 1 to a number, it's shorter than writing counter = counter + 1 but it is 
-                            the same.
-                        </li>
-                    </ol>
-                    
-                </p>
-                <pre class="w-full h-full" style="display:none;">
+                <h2 class="text-2xl text-white font-semibold">Code used</h2>
+                <pre class="w-full h-full">
                     <code class="text-xs"></code>
                 </pre>
             </div>
@@ -157,27 +97,52 @@ for (var counter = 0; counter < 5; counter++) {
 const form = document.querySelector("form");
 const resultDomElement = document.getElementById('result');
 
-function newLineInDom() {
-    resultDomElement.innerHTML += '\n';
-}
-function printInDom(text) {
-    resultDomElement.innerHTML += text;
-}
-
 // When user click on Button or Press ENTER
 // YOUR PROGRAM :
 form.addEventListener("submit", event => {
     event.preventDefault();
     // Instantiate the variables that will be used:
-    let output = '' // \n means 'Enter' or 'Skip a line'
-    let rows = parseInt(document.getElementById('rows').value);
+    let output = '\n> ' // \n means 'Enter' or 'Skip a line'
+    let weight = parseInt(document.getElementById('weight').value);
+    let height = parseFloat(document.getElementById('height').value);
+    let gender = document.getElementById('gender').value;
     
-    newLineInDom();
-    for (var counter = 0; counter < rows; counter++) {
-        output += '*';
-        printInDom(output);
-        newLineInDom();
+    output += gender + ': ';
+    let result = weight/(height*height)
+    
+    if (gender == 'male') {
+        result = result - 3.9;
     }
+    
+    // Female 
+    // 16.5 annorexia
+    // 18.5 thinness
+    // 25 normal weight
+    // 30 overweight
+    
+    // Male (- 3.9)
+    // 16.5 annorexia
+    // 17 thinness
+    // 25 - 3.9 normal weight
+    // 30 - 3.9 overweight
+    if (result < 16.5) {
+        output += 'annorexia';
+    }
+    else if(result < 18.5) {
+        output += 'thinness';
+    }
+    else if(result < 25) {
+        output += 'normal weight';
+    }
+    else if(result < 30) {
+        output += 'overweight';
+    }
+    else if(result >= 30) {
+        output += 'obese';
+    }
+    
+    // Show the output on document
+    resultDomElement.innerHTML += output;
 });
 document.addEventListener('DOMContentLoaded', (event) => {
   document.querySelectorAll('pre code').forEach((block) => {
@@ -190,12 +155,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('nav-toggle').onclick = function(){
             document.getElementById("nav-content").classList.toggle("hidden");
         }
-        // document.addEventListener('DOMContentLoaded', (event) => {
-        //   document.querySelectorAll('pre code').forEach((block) => {
-        //     block.innerHTML = document.getElementById('script').innerHTML;
-        //     hljs.highlightBlock(block);
-        //   });
-        // });
+        document.addEventListener('DOMContentLoaded', (event) => {
+          document.querySelectorAll('pre code').forEach((block) => {
+            block.innerHTML = document.getElementById('script').innerHTML;
+            hljs.highlightBlock(block);
+          });
+        });
         function clearOutput() {
             event.preventDefault();
             document.getElementById('result').innerHTML = '> ...';
